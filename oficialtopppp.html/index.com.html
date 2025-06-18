@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TOP SNEAKERS 😎</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f0;
+      color: #111;
+    }
+    header {
+      background-color: #000;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #002b80;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 25px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: #ffcc00;
+      color: black;
+    }
+    section {
+      padding: 30px;
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    .gallery { 
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .sneaker-card {
+      background-color: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      border: 3px solid #002b80;
+    }
+    .sneaker-brand {
+      text-align: center;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #002b80;
+    }
+    .review {
+      background-color: white;
+      border-left: 5px solid #ffcc00;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>TOP SNEAKERS 😎</h1>
+    <p>Exclusividad y diseño en cada par</p>
+  </header>
+
+  <nav>
+    <a href="#" onclick="mostrarSeccion('sneakers')">Sneakers</a>
+    <a href="#" onclick="mostrarSeccion('reseñas')">Reseñas</a>
+    <a href="#" onclick="mostrarSeccion('favoritos')">Favoritos</a>
+  </nav>
+
+  <section id="sneakers" class="active">
+    <h2>Galería de Sneakers</h2>
+    <div class="gallery">
+
+      <div class="sneaker-card">
+        <img src="jordan1-chicago.jpg" alt="Air Jordan 1 Chicago">
+        <div class="sneaker-brand">Nike</div>
+      </div>
+
+      <div class="sneaker-card">
+        <img src="https://images.stockx.com/images/Nike-Air-Max-1-97-Sean-Wotherspoon-Product.jpg" alt="Nike Air Max 1/97 Sean Wotherspoon">
+        <div class="sneaker-brand">Nike</div>
+      </div>
+
+      <div class="sneaker-card">
+        <img src="https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Zebra-Product.jpg" alt="Yeezy Boost 350 V2 Zebra">
+        <div class="sneaker-brand">Adidas</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="reseñas">
+    <h2>Reseñas</h2>
+    <div class="review">
+      <h3>Air Jordan 1 Retro High OG “Chicago”</h3>
+      <p><strong>Precio:</strong> $180 USD (lanzamiento) / $600+ USD (reventa)</p>
+      <p><strong>Sugerencia:</strong> El clásico más codiciado, va perfecto con outfits urbanos y vintage.</p>
+      <p><strong>Disponibilidad:</strong> Muy limitada, disponible en StockX y GOAT.</p>
+      <p><strong>Comentario:</strong> Ícono de los 80’s y símbolo de la cultura sneaker. Un must-have para coleccionistas.</p>
+    </div>
+    <div class="review">
+      <h3>Nike Air Max 1/97 Sean Wotherspoon</h3>
+      <p><strong>Precio:</strong> $160 USD (lanzamiento) / $900+ USD (reventa)</p>
+      <p><strong>Sugerencia:</strong> Ideal para destacar con estilo retro y toques de colores vibrantes.</p>
+      <p><strong>Disponibilidad:</strong> Edición limitada, difícil de conseguir. Reventa únicamente.</p>
+      <p><strong>Comentario:</strong> Diseño innovador que mezcla dos modelos legendarios. Comodidad premium y diseño único.</p>
+    </div>
+    <div class="review">
+      <h3>Yeezy Boost 350 V2 “Zebra”</h3>
+      <p><strong>Precio:</strong> $220 USD / $300–$450 USD (reventa)</p>
+      <p><strong>Sugerencia:</strong> Perfectos para un look moderno, minimalista y cómodo.</p>
+      <p><strong>Disponibilidad:</strong> Relanzado varias veces, aún escaso. A veces disponible en Yeezy Supply y Adidas Confirmed.</p>
+      <p><strong>Comentario:</strong> Uno de los Yeezys más populares, combina comodidad con estilo salvaje y único.</p>
+    </div>
+  </section>
+
+  <section id="favoritos">
+    <h2>Mis Sneakers Favoritos 💛</h2>
+    <p>Aquí aparecerán tus modelos favoritos en el futuro. ¡Muy pronto!</p>
+  </section>
+
+  <footer>
+    <p>&copy; Alumno: Gerardo Palestina NL:19 Escuela: Dr. Alejandro Cerisola Materia:TICS </p>
+  </footer>
+
+  <script>
+    function mostrarSeccion(id) {
+      const secciones = document.querySelectorAll('section');
+      secciones.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
